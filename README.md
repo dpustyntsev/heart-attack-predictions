@@ -12,17 +12,19 @@ API принимает путь к CSV-файлу и возвращает пре
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/dpustyntsev/heart-attack-predictions
+git clone https://github.com/dpustyntsev/heart-attack-predictions.git
 cd heart_attack
 ```
 
-2. Создайте и активируйте окружение Conda (если ещё не создано):
+2. Создайте и активируйте окружение Conda:
+
+   Официальный сайт: 'https://www.anaconda.com/products/distribution'
 ```bash
-conda create -n practicum python=3.11
+conda create -n practicum python=3.9.21
 conda activate practicum
 ```
 
-1. Установите зависимости:
+3. Установите зависимости:
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,7 +40,6 @@ uvicorn app.main:app --reload
 `http://127.0.0.1:8000`
 
 3. Вариант взаимодействия через интерфейс Swagger (json записи):
-    Пример использования:
     - Перейдите по ссылке `http://127.0.0.1:8000/docs`
     - Выберите эндпоинт POST /upload/path
     - Нажмите "Try it out", введите json с путем к CSV-файлу, например:
