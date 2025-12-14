@@ -18,7 +18,7 @@ cd heart_attack
 
 2. Создайте и активируйте окружение Conda:
 
-   Официальный сайт: 'https://www.anaconda.com/products/distribution'
+   Официальный сайт: `https://www.anaconda.com/products/distribution`
 ```bash
 conda create -n practicum python=3.9.21
 conda activate practicum
@@ -50,7 +50,8 @@ uvicorn app.main:app --reload
         ```
     - Нажмите Execute и получите предсказания в json-формате.
 
-4. Вариант взаимодействия через терминал (curl)
+4. Вариант взаимодействия через терминал (curl):
+
     Для Anaconda Prompt / Git Bash
     ```bash
     curl -X POST "http://127.0.0.1:8000/upload/path" -H "Content-Type: application/json" -d "{\"csv_path\": \"heart_test.csv\"}"
