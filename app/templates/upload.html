@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Attack Prediction</title>
+</head>
+<body>
+    <h1>Предсказание риска сердечного приступа</h1>
+    <h3>Загрузите CSV с данными пациентов</h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required><br><br>
+        <button type="submit">Предсказать</button>
+    </form>
+{% if predictions %}
+    <h3>Результаты предсказаний:</h3>
+    0 - низкий шанс<br>
+    1 - высокий шанс<br>
+    ️<form action="/download" method="get">
+        <button type="submit">Скачать CSV с предсказаниями</button>
+    </form>
+    <br>
+    </form>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Prediction</th>
+        </tr>
+        {% for row in predictions %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.prediction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+</body>
+</html>

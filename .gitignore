@@ -1,0 +1,40 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv/
+practicum/
+env/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# Predictions folder (contains generated CSVs)
+predictions/
+
+# CatBoost model files
+catboost_info/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Python egg info
+*.egg-info/
+*.egg
